@@ -1,6 +1,6 @@
 {
   "name": "@sengac/tree-sitter-c",
-  "version": "0.25.6",
+  "version": "0.25.7",
   "description": "C grammar for tree-sitter",
   "repository": "https://github.com/sengac/tree-sitter-c",
   "license": "MIT",
@@ -55,7 +55,8 @@
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
     "test": "node --test bindings/node/*_test.js",
-    "install": "node-gyp-build"
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --name node.napi"
   },
   "publishConfig": {
     "access": "public"
